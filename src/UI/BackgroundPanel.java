@@ -8,6 +8,10 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class BackgroundPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Image img = null;
 	
 	public BackgroundPanel() {
@@ -24,14 +28,12 @@ public class BackgroundPanel extends JPanel {
 		int width = getWidth();
 		int height = getHeight();
 		try {
-			img = ImageIO.read(getClass().getResource("/UI/image/background.jpg"));
+			img = ImageIO.read(getClass().getResource("/UI/image/background.png"));
 		} catch (Exception e) {
 		}    
 		if(img != null)
 			g2.drawImage(img, 0, 0, width, height, this);
 	}
-
-
 	
 	public void paintComponent(Graphics g)
 	{
